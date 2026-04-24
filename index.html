@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-orange: #ff6600;
+            --white: #ffffff;
+            --dark-grey: #333;
+            --light-grey: #f4f4f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--dark-grey);
+            line-height: 1.6;
+        }
+
+        /* Fixed Sidebar Socials */
+        .social-sidebar {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            background: var(--primary-orange);
+            padding: 10px;
+            border-radius: 0 10px 10px 0;
+            z-index: 1000;
+        }
+
+            .social-sidebar a {
+                color: white;
+                font-size: 20px;
+                margin: 15px 5px;
+                transition: 0.3s;
+            }
+
+                .social-sidebar a:hover {
+                    transform: scale(1.2);
+                }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('profile.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        nav {
+            background: var(--white);
+            width: 100%;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+
+            nav a {
+                color: var(--dark-grey);
+                text-decoration: none;
+                margin: 0 20px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+                nav a:hover {
+                    color: var(--primary-orange);
+                }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            color: var(--primary-orange);
+            font-weight: bold;
+        }
+
+        /* Animated Transition Text */
+        .tech-transition {
+            background: var(--primary-orange);
+            color: white;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+            .tech-transition p {
+                display: inline-block;
+                padding-left: 100%;
+                animation: marquee 20s linear infinite;
+                font-weight: 500;
+            }
+
+        @keyframes marquee {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(-100%, 0);
+            }
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .intro-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .btn-group {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-email {
+            background: var(--primary-orange);
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+            transform: translateY(-3px);
+        }
+
+        /* Gallery Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            border: 2px solid var(--light-grey);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            background: #fff;
+        }
+
+            .gallery-item img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+            }
+
+        .caption {
+            padding: 15px;
+            font-weight: bold;
+            color: var(--primary-orange);
+        }
+
+        /* Direct Message Form */
+        .contact-form {
+            background: var(--light-grey);
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+            .contact-form input, .contact-form textarea {
+                width: 100%;
+                padding: 12px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .contact-form button {
+                background: var(--primary-orange);
+                color: white;
+                border: none;
+                padding: 15px 30px;
+                cursor: pointer;
+                font-weight: bold;
+                width: 100%;
+            }
+
+        footer {
+            background: var(--primary-orange);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            nav {
+                flex-wrap: wrap;
+            }
+
+            .social-sidebar {
+                display: none;
+            }
+            /* Optional: Hide sidebar on mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="social-sidebar">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+    <header id="home">
+        <div class="hero-text">
+            <h1>James Ndirangu</h1>
+            <p>Professional IT Specialist and Trainer</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+        <a href="school.html">experience</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contacts</a>
+    </nav>
+
+    <div class="tech-transition">
+        <p>Innovation • Networking • maintaining hardware & repair • graphic design • Cybersecurity • Hardware Troubleshooting • AI  • Digital Literacy • Database Management • web design</p>
+    </div>
+
+    <div class="container intro-section">
+        <h2>About Me</h2>
+        <hr style="width: 50px; margin: 20px auto; border: 2px solid var(--primary-orange);">
+        <p>
+            Welcome! I am James Ndirangu**, a dedicated **ICT Trainer and Specialist** with a profound passion for the digital frontier.
+            Technology isn't just my career; it's the lens through which I view the future. I thrive on demystifying complex systems
+            and empowering the next generation of tech leaders.
+        </p>
+        <p style="margin-top: 20px;">
+            With a rich background in technical education, I have successfully shared my expertise at:
+            <strong>Petanns Technical College</strong>, <strong>Molo Technical and Vocational College</strong>,
+            <strong>Spiritans Technical College</strong>, and <strong>Aberdare Technical College</strong>.
+        </p>
+
+        <div class="btn-group">
+            <a href="https://wa.me/254729421226" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+            <a href="mailto:jamesndirangu201919@gmail.com" class="btn btn-email"><i class="fas fa-envelope"></i> Send Email</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 style="text-align:center">Work & Training Highlights</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="repair.jpeg" alt="Computer Repair">
+                <div class="caption">Computer repair session class on progress</div>
+            </div>
+            <div class="gallery-item">
+                <img src="repair2.jpeg" alt="Computer Repair">
+                <div class="caption">Computer repair session class on progress</div>
+            </div>
+            <div class="gallery-item">
+                <img src="repair3.jpeg" alt="Computer Repair">
+                <div class="caption">Computer repair session class on progress</div>
+            </div>
+            <div class="gallery-item">
+                <img src="repair4.jpeg" alt="Computer Repair">
+                <div class="caption">Computer repair session class on progress</div>
+            </div>
+            <div class="gallery-item">
+                <img src="repair5.jpeg" alt="Computer Repair">
+                <div class="caption">Computer repair session class on progress</div>
+            </div>
+            <div class="gallery-item">
+                <img src="repair6.jpeg" alt="Computer Repair">
+                <div class="caption">Computer repair session class on progress</div>
+            </div>
+            <div class="gallery-item">
+                <img src="repair7.jpeg" alt="Computer Repair">
+                <div class="caption">Computer repair session class on progress</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="web.jpeg" alt="Web Design">
+                <div class="caption">Fullstack Web Development Module</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="nettools.jpeg" alt="Networking">
+                <div class="caption">Networking Tools</div>
+            </div>
+            <div class="gallery-item">
+                <img src="nttools.jpeg" alt="Networking">
+                <div class="caption">Networking Tools</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="students.jpeg" alt="Students">
+                <div class="caption">Database exam on session</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="contact">
+        <div class="contact-form">
+            <h3 style="text-align: center;">Institution Direct Message</h3>
+            <p style="text-align: center; margin-bottom: 20px;">Schools and colleges can reach out directly for training engagements.</p>
+            <form action="#">
+                <input type="text" placeholder="Institution Name" required>
+                <input type="email" placeholder="Official Email" required>
+                <textarea rows="5" placeholder="Inquiry Details..."></textarea>
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>James Ndirangu</strong> | Professional IT Specialist and Trainer</p>
+        <p>&copy; 2026 All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

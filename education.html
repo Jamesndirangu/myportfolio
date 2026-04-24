@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>education</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+:root {
+    --primary-orange: #ff6600;
+    --white: #ffffff;
+    --dark-grey: #333;
+    --light-grey: #f4f4f4;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body {
+    background: var(--white);
+    color: var(--dark-grey);
+}
+
+/* HEADER */
+.top-header {
+    text-align:center;
+    padding:20px;
+}
+
+.top-header p {
+    color:var(--primary-orange);
+    font-weight:bold;
+}
+
+/* NAV */
+nav {
+    background: var(--primary-orange);
+    display:flex;
+    justify-content:center;
+    padding:15px;
+    position:sticky;
+    top:0;
+}
+
+nav a {
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* TRANSITION */
+.tech-transition {
+    background:#333;
+    color:white;
+    padding:10px;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.tech-transition p {
+    display:inline-block;
+    padding-left:100%;
+    animation:marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    from {transform:translateX(0);}
+    to {transform:translateX(-100%);}
+}
+
+/* HERO */
+.hero-banner {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('james.jpeg');
+    height:70vh;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-align:center;
+}
+
+/* CONTAINER */
+.container {
+    max-width:1100px;
+    margin:40px auto;
+    padding:0 20px;
+    text-align:center;
+}
+
+/* BUTTONS */
+.btn {
+    padding:10px 20px;
+    color:white;
+    text-decoration:none;
+    margin:10px;
+    display:inline-block;
+}
+
+.btn-whatsapp {background:#25D366;}
+.btn-email {background:var(--primary-orange);}
+
+/* EDUCATION */
+.education-card {
+    background: var(--light-grey);
+    margin: 20px auto;
+    padding: 20px;
+    border-left: 5px solid var(--primary-orange);
+    border-radius: 8px;
+    max-width: 800px;
+}
+
+.education-card img {
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:8px;
+    margin-bottom:10px;
+}
+
+.education-card h3 {
+    color: var(--primary-orange);
+}
+
+/* FOOTER */
+    footer {
+        background: var(--primary-orange);
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="top-header">
+<h1>James Ndirangu</h1>
+<p>Professional IT Specialist and Trainer</p>
+</div>
+
+<!-- NAV -->
+<nav>
+<a href="index.html">Home</a>
+<a href="education.html">Education</a>
+<a href="school.html">experience</a>
+<a href="skills.html">Skills</a>
+<a href="contact.html">Contacts</a>
+</nav>
+
+<!-- TRANSITION TEXT -->
+<div class="tech-transition">
+<p>Networking • Programming • AI • Graphic Design • Database • Fullstack • Hardware Repair</p>
+</div>
+
+<!-- HERO -->
+<div class="hero-banner">
+<h2>Empowering Through Technology</h2>
+</div>
+
+<!-- HOME -->
+<div class="container" id="home">
+<h2>Welcome</h2>
+<p>I am an ICT Trainer passionate about practical learning and real-world technology skills.</p>
+
+<a href="https://wa.me/254729421226" class="btn btn-whatsapp">WhatsApp</a>
+<a href="mailto:jamesndirangu201919@gmail.com" class="btn btn-email">Email</a>
+</div>
+
+<!-- EDUCATION -->
+<div class="container" id="education">
+<h2>Education Background</h2>
+
+<div class="education-card">
+<img src="kist.jfif">
+<h3>Kiambu Institute of Science and Technology</h3>
+<p><strong>Period:</strong> 2019 - 2023</p>
+<p><strong>Admission No:</strong> DCT-1909-135</p>
+<p><strong>Diploma in ICT</strong></p>
+<p><strong>Grade:</strong> Credit Pass</p>
+</div>
+
+<div class="education-card">
+<img src="kstvet.webp">
+<h3>Kenya School of TVET</h3>
+<p><strong>Year Joined:</strong> 2024</p>
+<p><strong>Status:</strong> Currently Studying</p>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>James Ndirangu &copy; 2026</p>
+</footer>
+
+</body>
+</html>
